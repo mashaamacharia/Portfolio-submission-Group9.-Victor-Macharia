@@ -4,21 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <link rel="stylesheet" href="styles.css">
+    <title>Victor Macharia | Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@iconscout/unicons@4.0.8/css/line.min.css">
-    
-    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
+    <div class="custom-cursor"></div>
     <div class="container">
         <nav id="header">
             <div class="nav-logo">
-                <p class="nav-name">CraftsManCode</p>
+                <div class="logo-icon">
+                    <i class="uil uil-code-branch" style="font-size: 24px; color: var(--primary-color);"></i>
+                </div>
+                <p class="nav-name">CraftMansCode</p>
             </div>
-            <div class="nav-menu " id="myNavmenu">
+            <div class="nav-menu" id="myNavmenu">
                 <ul class="nav_menu_list">
                     <li class="nav-list">
                         <a href="#home" class="nav-link active-link"> Home </a>
@@ -29,16 +31,23 @@
                         <div class="circle"></div>
                     </li>
                     <li class="nav-list">
+                        <a href="#portfolio" class="nav-link">Portfolio</a>
+                        <div class="circle"></div>
+                    </li>
+                    <!-- <li class="nav-list">
+                        <a href="#testimonials" class="nav-link">Testimonials</a>
+                        <div class="circle"></div>
+                    </li> -->
+                    <li class="nav-list">
                         <a href="#projects" class="nav-link">Projects</a>
                         <div class="circle"></div>
                     </li>
                     <li class="nav-list">
-                        <a href="#contact" class="nav-link">Contacts</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                         <div class="circle"></div>
                     </li>
                 </ul>
             </div>
-            <!-- dark mode -->
             <div class="mode">
                 <div class="moon-sun" id="toggle-switch">
                     <i class="fa fa-moon" id="moon"></i>
@@ -46,168 +55,303 @@
                 </div>
             </div>
             <div class="nav-menu-btn">
-                <i class="uil uil-bars" onclick="myMenuFunction()"></i>
+                <i class="uil uil-bars" id="menu-btn"></i>
             </div>
         </nav>
 
         <!-- main -->
         <main class="wrapper">
             <section class="featured-box" id="home">
-                <div class="featured-text">
+                <div class="animated-bg">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                <div class="featured-text fade-right">
                     <div class="hello">
-                        <p>Hello I am</p>
+                        <p>Hello, I am</p>
                     </div>
                     <div class="featured-name">
                         <span class="typedText"></span>
                     </div>
                     <div class="text-info">
-                        <p>My name is : Victor Macharia ! I am web developer with 2+ years experience. </p>
+                        <p>I'm Victor Macharia, a passionate web developer with 2+ years of experience crafting
+                            beautiful, functional, and responsive websites. I transform ideas into digital reality.</p>
                     </div>
                     <div class="text-btn">
-                        <button class="btn hire-btn">Hire Me</button>
-                        <button class="btn">Download CV <i class="uil uil-file"></i></button>
+                        <button class="btn hire-btn"
+                            onclick="window.location.href='mailto:vickienesh0705@gmail.com';">Hire Me</button>
+                        <button class="btn" onclick="window.open('cv.pdf', '_blank');">Download CV <i
+                                class="uil uil-file-download-alt"></i></button>
                     </div>
                     <div class="social_icons">
-                        <div class="icon_circle"></div>
-                        <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
-                        <div class="icon"><i class="uil uil-instagram"></i></div>
-                        <div class="icon"><i class="uil uil-github-alt"></i></div>
-                        <div class="icon"><i class="uil uil-twitter-alt"></i></div>
+                        <a href="https://www.linkedin.com/in/victor-macharia-a16865319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                           target="_blank" rel="noopener noreferrer" class="icon" aria-label="LinkedIn Profile"><i class="uil uil-linkedin-alt"></i></a>
+                    
+                        <a href="https://github.com/mashaamacharia" target="_blank" rel="noopener noreferrer" class="icon" aria-label="GitHub Profile"><i
+                                class="uil uil-github-alt"></i></a>
+                    
+                        <a href="https://x.com/TEchNEsh?t=g3JJiSJue4XtVxBE-NBsdw&s=08" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Twitter Profile"><i
+                                class="uil uil-twitter-alt"></i></a>
+                    
+                        <a href="https://www.instagram.com/mashaa.macharia?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Instagram Profile"><i class="uil uil-instagram"></i></a>
                     </div>
+                    
                 </div>
-                <div class="featured-image">
+                <div class="featured-image fade-up">
                     <div class="image">
-                        <img src="el.jpg" alt="">
+                        <img src="el.jpg" alt="Victor Macharia">
                     </div>
                 </div>
             </section>
 
-            <!--about box---->
-
-            <section class="section" id="about">
+            <!-- About Section -->
+            <section class="section fade-up" id="about">
                 <div class="top-header">
-                    <h1>About me</h1>
+                    <h1>About Me</h1>
+                    <span>My introduction</span>
                 </div>
                 <div class="row">
-                    <div class="col"> 
+                    <div class="col">
                         <div class="about-info">
                             <figure class="about-me">
+                                <img src="el.jpg" alt="Victor Macharia" class="profile">
                                 <figcaption>
-                                    <img src="el.jpg" alt="" class="profile">
-                                    <h2>Web developer</h2>
-                                    <p>My name is : Victor Macharia ! I am web developer with 2+ years experience.</p>
+                                    <h2>Web Developer</h2>
+                                    <p>I'm Victor Macharia, a dedicated web developer with a passion for creating
+                                        responsive, user-friendly websites. With over 2 years of experience, I've worked
+                                        with various technologies and frameworks to deliver exceptional digital
+                                        experiences. I specialize in front-end and back-end development, focusing on
+                                        creating clean, efficient, and scalable code.</p>
                                 </figcaption>
                             </figure>
-                            <button class="about-me-btn">Hire me</button>
+                            <button class="about-me-btn"
+                                onclick="window.location.href='mailto:vickienesh0705@gmail.com';">Hire Me</button>
                         </div>
                     </div>
-                    <div class="skill">
-                        <div class="skill-box">
-                            <span class="title">HTML</span>
-                            <div class="skill-bar ">
-                                <span class="skill-per html">
-                                    <span class="tooltip">80%</span>
-                                </span>
+                    <div class="col">
+                        <div class="skill">
+                            <div class="skill-box">
+                                <span class="title">HTML</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per html">
+                                        <span class="tooltip">80%</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="skill-box">
-                            <span class="title">CSS</span>
-                            <div class="skill-bar">
-                                <span class="skill-per css">
-                                    <span class="tooltip">80%</span>
-                                </span>
+                            <div class="skill-box">
+                                <span class="title">CSS</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per css">
+                                        <span class="tooltip">80%</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div class="skill-box">
-                            <span class="title">PHP</span>
-                            <div class="skill-bar">
-                                <span class="skill-per php">
-                                    <span class="tooltip">70%</span>
-                                </span>
+                            <div class="skill-box">
+                                <span class="title">PHP</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per php">
+                                        <span class="tooltip">70%</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div class="skill-box">
-                            <span class="title">Javascript</span>
-                            <div class="skill-bar">
-                                <span class="skill-per js">
-                                    <span class="tooltip">65%</span>
-                                </span>
+                            <div class="skill-box">
+                                <span class="title">JavaScript</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per js">
+                                        <span class="tooltip">65%</span>
+                                    </span>
+                                </div>
                             </div>
-                        </div>
-
-
-                        <div class="skill-box">
-                            <span class="title">SQL</span>
-                            <div class="skill-bar">
-                                <span class="skill-per SQL">
-                                    <span class="tooltip">75%</span>
-                                </span>
+                            <div class="skill-box">
+                                <span class="title">SQL</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per SQL">
+                                        <span class="tooltip">75%</span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="skill-box">
+                                <span class="title">React</span>
+                                <div class="skill-bar">
+                                    <span class="skill-per" style="width: 60%;">
+                                        <span class="tooltip">60%</span>
+                                    </span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <!---project box-->
-            <section class="section" id="projects">
+            <!-- Portfolio Section -->
+            <section class="section fade-up" id="portfolio">
+                <div class="top-header">
+                    <h1>Portfolio</h1>
+                    <span>My recent work</span>
+                </div>
+
+                <div class="portfolio-gallery">
+                    <div class="portfolio-item stagger-item">
+                        <img src="el.jpg" alt="E-commerce Website" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>E-commerce Website</h3>
+                            <p>A fully responsive online store with payment integration</p>
+                            <a href="#" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item stagger-item">
+                        <img src="el.jpg" alt="Restaurant App" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Restaurant App</h3>
+                            <p>Mobile-friendly application for food ordering</p>
+                            <a href="#" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-item stagger-item">
+                        <img src="el.jpg" alt="Portfolio Design" class="portfolio-img">
+                        <div class="portfolio-overlay">
+                            <h3>Portfolio Design</h3>
+                            <p>Custom portfolio website for a photographer</p>
+                            <a href="#" target="_blank">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Testimonials Section -->
+            <!-- <section class="section fade-up" id="testimonials">
+                <div class="top-header">
+                    <h1>Testimonials</h1>
+                    <span>What my clients say</span>
+                </div>
+
+                <div class="testimonials">
+                    <div class="testimonial-container">
+                        <div class="testimonial-card stagger-item">
+                            <div class="testimonial-text">
+                                <p>"Victor created an amazing website for my business. His attention to detail and
+                                    ability to understand my vision was impressive. The final product exceeded my
+                                    expectations!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/50/50" alt="Client" class="author-img">
+                                <div class="author-info">
+                                    <h4>Sarah Johnson</h4>
+                                    <p>Business Owner</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card stagger-item">
+                            <div class="testimonial-text">
+                                <p>"Working with Victor was a pleasure. He is professional, responsive, and delivers
+                                    high-quality work. I highly recommend his services to anyone looking for a skilled
+                                    web developer."</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/50/50" alt="Client" class="author-img">
+                                <div class="author-info">
+                                    <h4>Michael Davis</h4>
+                                    <p>Marketing Director</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card stagger-item">
+                            <div class="testimonial-text">
+                                <p>"Victor helped us modernize our outdated website. His technical expertise and
+                                    creative input transformed our online presence. Our customers love the new design
+                                    and functionality!"</p>
+                            </div>
+                            <div class="testimonial-author">
+                                <img src="/api/placeholder/50/50" alt="Client" class="author-img">
+                                <div class="author-info">
+                                    <h4>Emily Rodriguez</h4>
+                                    <p>Startup Founder</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- Projects Section -->
+            <section class="section fade-up" id="projects">
                 <div class="top-header">
                     <h1>Projects</h1>
+                    <span>My achievements and milestones</span>
                 </div>
+                <a href="https://github.com/mashaamacharia/projects" target="_blank" rel="noopener noreferrer"
+                    class="buttn">View All Projects <i class="uil uil-arrow-right"></i></a>
+
                 <div class="project-container">
-                    <div class="project-box">
+                    <div class="project-box stagger-item">
                         <i class="uil uil-briefcase-alt"></i>
                         <h3>Completed</h3>
-                        <label>10+ Finished projects</label>
+                        <label>7+ Finished projects</label>
                     </div>
-                    <div class="project-box">
+                    <div class="project-box stagger-item">
                         <i class="uil uil-users-alt"></i>
                         <h3>Clients</h3>
-                        <label for="">17+ Happy Clients</label>
+                        <label>17+ Happy Clients</label>
                     </div>
-                    <div class="project-box">
-                        <i class="uil uil-briefcase-alt"></i>
+                    <div class="project-box stagger-item">
+                        <i class="uil uil-award"></i>
                         <h3>Experience</h3>
-                        <label for="">2+ years in web development</label>
+                        <label>2+ years in web development</label>
                     </div>
                 </div>
             </section>
-            <!--Contact box-->
-            <section class="section" id="contact">
+
+            <!-- Contact Section -->
+            <section class="section fade-up" id="contact">
                 <div class="top-header">
-                    <h1>Let's work together</h1>
-                    <span>Do you have aproject in you mind, contact me here</span> <br> <br> <br>
+                    <h1>Let's Work Together</h1>
+                    <span>Have a project in mind? Contact me below</span>
                 </div>
                 <div class="row">
                     <div class="col">
                         <div class="contact-info">
-                            <h2>Find me <i class="uil uil-corner-right-down"></i></h2>
+                            <h2>Get in Touch <i class="uil uil-corner-right-down"></i></h2>
                             <p><i class="uil uil-envelope"></i>Email: vickienesh0705@gmail.com</p>
                             <p><i class="uil uil-phone"></i>Phone: 0706134493</p>
+                            <div class="social_icons">
+                                <a href="https://www.linkedin.com/in/victor-macharia-a16865319?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                                   target="_blank" rel="noopener noreferrer" class="icon" aria-label="LinkedIn Profile"><i class="uil uil-linkedin-alt"></i></a>
+                            
+                                <a href="https://github.com/mashaamacharia" target="_blank" rel="noopener noreferrer" class="icon" aria-label="GitHub Profile"><i
+                                        class="uil uil-github-alt"></i></a>
+                            
+                                <a href="https://x.com/TEchNEsh?t=g3JJiSJue4XtVxBE-NBsdw&s=08" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Twitter Profile"><i
+                                        class="uil uil-twitter-alt"></i></a>
+                            
+                                <a href="https://www.instagram.com/mashaa.macharia?igsh=YzljYTk1ODg3Zg==" target="_blank" rel="noopener noreferrer" class="icon" aria-label="Instagram Profile"><i class="uil uil-instagram"></i></a>
+                            </div>
+                            
                         </div>
                     </div>
                     <div class="col">
                         <div class="form-control">
                             <div class="form-inputs">
-                                <input type="text" class="input-field" placeholder="Your Name....">
-                                <input type="text" class="input-field" placeholder="Your Email....">
+                                <input type="text" class="input-field" placeholder="Your Name" required>
+                                <input type="email" class="input-field" placeholder="Your Email" required>
                             </div>
                             <div class="text-area">
-                                <input type="text" class="input-subject" placeholder="subject...">
-                                <textarea placeholder="message"></textarea>
+                                <input type="text" class="input-subject" placeholder="Subject">
+                                <textarea placeholder="Your Message..." required></textarea>
                             </div>
                             <div class="form-button">
-                                <button class="btn">send <i class="uil uil-message"></i> </button>
+                                <button class="btn" id="submit-form">Send Message <i
+                                        class="uil uil-message"></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
         </main>
-        <!--Footer-->
+
+        <!-- Footer -->
         <footer>
             <div class="middle-footer">
                 <ul class="footer-menu">
@@ -218,26 +362,40 @@
                         <a href="#about">About</a>
                     </li>
                     <li class="footer_menu_list">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <!-- <li class="footer_menu_list">
+                        <a href="#testimonials">Testimonials</a>
+                    </li> -->
+                    <li class="footer_menu_list">
                         <a href="#projects">Projects</a>
                     </li>
                     <li class="footer_menu_list">
-                        <a href="#contact">Contacts</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="footer-social-icons">
-                <div class="icon"><i class="fa-brands fa-linkedin-in icon"></i></div>
+                <div class="icon"><i class="uil uil-linkedin-alt"></i></div>
                 <div class="icon"><i class="uil uil-instagram"></i></div>
                 <div class="icon"><i class="uil uil-github-alt"></i></div>
                 <div class="icon"><i class="uil uil-twitter-alt"></i></div>
             </div>
             <div class="bottom-footer">
-                <p>Copyright &copy; <a href="#home" style="text-decoration: none;">Victor macharia design</a> All rights
+                <p>Copyright &copy; <span id="current-year"></span> <a href="#home">Victor Macharia</a> - All rights
                     reserved.</p>
             </div>
         </footer>
-    </div><script src="https://unpkg.com/scrollreveal"></script>
+    </div>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop">
+        <i class="uil uil-arrow-up"></i>
+    </div>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
