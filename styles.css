@@ -129,7 +129,7 @@ nav {
 }
 
 .nav-list:hover .circle,
-.active-link + .circle {
+.active-link+.circle {
     opacity: 1;
     bottom: -4px;
 }
@@ -229,6 +229,7 @@ body.dark-mode #sun {
     background-color: var(--primary-color);
     color: var(--white-color);
 }
+
 .black-text {
     color: black;
 }
@@ -239,7 +240,8 @@ body.dark-mode #sun {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    position: relative; /* This is important for absolute positioning of rings */
+    position: relative;
+    /* This is important for absolute positioning of rings */
 }
 
 .icon {
@@ -256,7 +258,8 @@ body.dark-mode #sun {
     text-decoration: none;
     box-shadow: var(--box-shadow);
     position: relative;
-    z-index: 2; /* Keep icons above the rings */
+    z-index: 2;
+    /* Keep icons above the rings */
 }
 
 .icon:hover {
@@ -271,7 +274,8 @@ body.dark-mode #sun {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    position: relative; /* Important for absolute positioning of rings */
+    position: relative;
+    /* Important for absolute positioning of rings */
 }
 
 .icon {
@@ -288,7 +292,8 @@ body.dark-mode #sun {
     text-decoration: none;
     box-shadow: var(--box-shadow);
     position: relative;
-    z-index: 2; /* Keep icons above the rings */
+    z-index: 2;
+    /* Keep icons above the rings */
 }
 
 .icon:hover {
@@ -301,7 +306,8 @@ body.dark-mode #sun {
 .ring {
     position: absolute;
     border-radius: 50%;
-    pointer-events: none; /* Make sure rings don't interfere with icon clicks */
+    pointer-events: none;
+    /* Make sure rings don't interfere with icon clicks */
     z-index: 1;
     opacity: 0.7;
     border-style: solid;
@@ -314,7 +320,8 @@ body.dark-mode #sun {
     height: 50px;
     top: -5px;
     left: -5px;
-    box-shadow: 0 0 15px #4CAF50; /* Success green glow */
+    box-shadow: 0 0 15px #4CAF50;
+    /* Success green glow */
     border-color: #4CAF50;
 }
 
@@ -323,7 +330,8 @@ body.dark-mode #sun {
     height: 60px;
     top: -10px;
     left: -10px;
-    box-shadow: 0 0 15px #FF5252; /* Red glow */
+    box-shadow: 0 0 15px #FF5252;
+    /* Red glow */
     border-color: #FF5252;
 }
 
@@ -333,10 +341,12 @@ body.dark-mode #sun {
         transform: scale(1);
         opacity: 0.7;
     }
+
     50% {
         transform: scale(1.1);
         opacity: 0.9;
     }
+
     100% {
         transform: scale(1);
         opacity: 0.7;
@@ -374,9 +384,11 @@ body.dark-mode #sun {
     0% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-15px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -640,8 +652,8 @@ body.dark-mode #sun {
     left: 0;
     width: 100%;
     padding: 20px;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
-    color: white;
+    background: linear-gradient(to top, rgba(0, 0, 0, 1.2), transparent);
+    color: yellow;
     transform: translateY(100%);
     transition: var(--transition);
 }
@@ -711,7 +723,8 @@ body.dark-mode #sun {
     margin-bottom: 20px;
 }
 
-.input-field, .input-subject {
+.input-field,
+.input-subject {
     width: 100%;
     padding: 12px 15px;
     border: 1px solid #ddd;
@@ -720,7 +733,9 @@ body.dark-mode #sun {
     transition: var(--transition);
 }
 
-.input-field:focus, .input-subject:focus, textarea:focus {
+.input-field:focus,
+.input-subject:focus,
+textarea:focus {
     border-color: var(--primary-color);
 }
 
@@ -751,11 +766,13 @@ textarea {
     overflow-x: auto;
     padding: 20px 0;
     scroll-snap-type: x mandatory;
-    scrollbar-width: none; /* Firefox */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
 .testimonial-container::-webkit-scrollbar {
-    display: none; /* Chrome, Safari, Opera */
+    display: none;
+    /* Chrome, Safari, Opera */
 }
 
 .testimonial-card {
@@ -832,12 +849,12 @@ footer {
 
 .footer_menu_list a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--primary-color);
     transition: var(--transition);
 }
 
 .footer_menu_list a:hover {
-    color: var(--primary-color);
+    color: var(--primary-color-dark);
 }
 
 .footer-social-icons {
@@ -917,6 +934,33 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .featured-box {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 100px 20px 60px;
+    }
+
+    .featured-text {
+        padding-right: 0;
+        margin-top: 40px;
+    }
+
+    .text-btn {
+        justify-content: center;
+    }
+
+    .social_icons {
+        justify-content: center;
+    }
+
+    .featured-name {
+        font-size: 2.2rem;
+    }
+
+    .featured-image {
+        margin-bottom: 30px;
+    }
+
     nav {
         padding: 15px;
     }
@@ -936,6 +980,12 @@ footer {
         box-shadow: var(--box-shadow);
         z-index: 999;
     }
+
+    body.dark-mode .nav_menu_list {
+        background-color: var(--dark-secondary);
+        /* or a suitable dark variable */
+    }
+
 
     .nav_menu_list.show-menu {
         left: 0;
@@ -967,6 +1017,40 @@ footer {
 }
 
 @media (max-width: 576px) {
+    .featured-box {
+        padding: 80px 15px 40px;
+    }
+
+    .featured-name {
+        font-size: 1.8rem;
+    }
+
+    .hello {
+        font-size: 1rem;
+    }
+
+    .text-info {
+        font-size: 0.95rem;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    .text-btn {
+        flex-direction: column;
+        width: 100%;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
     .featured-name {
         font-size: 2.5rem;
     }
@@ -1014,12 +1098,19 @@ footer {
 }
 
 @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent }
+    50% {
+        border-color: transparent
+    }
 }
 
 /* Custom cursor */
@@ -1034,6 +1125,7 @@ footer {
     z-index: 9999;
     transition: transform 0.1s ease;
 }
+
 .verify-button {
     color: white;
     text-decoration: none;
@@ -1049,13 +1141,15 @@ footer {
 .verify-button:hover {
     background-color: #0aa33d;
 }
+
 /* Message Box Styling */
 .alert {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 5px;
     font-size: 16px;
-    display: none; /* Hidden by default */
+    display: none;
+    /* Hidden by default */
 }
 
 .alert-success {
@@ -1092,6 +1186,7 @@ footer {
     right: 10px;
     cursor: pointer;
 }
+
 .certificate-status {
     display: flex;
     align-items: center;
@@ -1104,7 +1199,7 @@ footer {
     padding: 6px 12px;
     border-radius: 20px;
     width: fit-content;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
 .status-dot {
@@ -1121,10 +1216,12 @@ footer {
         transform: scale(1);
         box-shadow: 0 0 0 0 rgba(40, 225, 143, 0.7);
     }
+
     70% {
         transform: scale(1.2);
         box-shadow: 0 0 0 8px rgba(40, 225, 143, 0);
     }
+
     100% {
         transform: scale(1);
         box-shadow: 0 0 0 0 rgba(40, 225, 143, 0);
@@ -1134,8 +1231,10 @@ footer {
 .status-text {
     letter-spacing: 0.3px;
 }
+
 a[href^="mailto:"] {
-    color: var(--primary-color); /* Matches parent color */
+    color: var(--primary-color);
+    /* Matches parent color */
     text-decoration: none;
 }
 
