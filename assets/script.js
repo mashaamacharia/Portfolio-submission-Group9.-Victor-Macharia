@@ -1,3 +1,92 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    const icons = document.querySelectorAll('.icon');
+    const ring = document.getElementById('ring');
+    const iconPositions = [];
+    let animationFrame;
+    let startTime;
+    let animationDuration = 3000; // Total time for one complete loop in ms
+    
+    // Pre-calculate icon positions
+    function calculateIconPositions() {
+        iconPositions.length = 0;
+        const parentRect = document.getElementById('socialIcons').getBoundingClientRect();
+        
+        icons.forEach(icon => {
+            const rect = icon.getBoundingClientRect();
+            iconPositions.push(rect.left - parentRect.left);
+        });
+    }
+    
+    // Initialize positions
+    calculateIconPositions();
+    
+    // Handle window resize
+    window.addEventListener('resize', calculateIconPositions);
+    
+    // Remove pulse animation and set smooth continuous transition
+    ring.style.animation = 'none';
+    ring.style.transition = 'transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1)';
+    
+    // Continuous animation loop using requestAnimationFrame
+    function animate(timestamp) {
+        if (!startTime) startTime = timestamp;
+        
+        // Calculate progress (0 to 1) based on elapsed time
+        const elapsed = timestamp - startTime;
+        const progress = (elapsed % animationDuration) / animationDuration;
+        
+        // Get the current and next icon indices
+        const totalIcons = icons.length;
+        const position = progress * totalIcons;
+        const currentIndex = Math.floor(position);
+        const nextIndex = (currentIndex + 1) % totalIcons;
+        const localProgress = position - currentIndex; // Progress between current and next (0 to 1)
+        
+        // Calculate the exact position for smooth movement
+        const currentPos = iconPositions[currentIndex];
+        const nextPos = iconPositions[nextIndex];
+        const exactPosition = currentPos + (nextPos - currentPos) * localProgress;
+        
+        // Handle wrap-around case (last to first)
+        let finalPosition = exactPosition;
+        if (currentIndex === totalIcons - 1 && nextIndex === 0 && localProgress > 0) {
+            const wrapDistance = iconPositions[0] + (iconPositions[totalIcons - 1] - iconPositions[0]) * (1 - localProgress);
+            finalPosition = Math.min(exactPosition, wrapDistance);
+        }
+        
+        // Update ring position
+        ring.style.transform = `translateX(${finalPosition}px)`;
+        
+        // Update active state for icons
+        icons.forEach((icon, idx) => {
+            if (idx === currentIndex) {
+                icon.classList.add('active');
+            } else {
+                icon.classList.remove('active');
+            }
+        });
+        
+        // Continue animation
+        animationFrame = requestAnimationFrame(animate);
+    }
+    
+    // Start animation
+    animationFrame = requestAnimationFrame(animate);
+    
+    // Add hover event to highlight icons
+    icons.forEach((icon, index) => {
+        icon.addEventListener('mouseenter', function() {
+            // We no longer pause the animation, just highlight the icon
+            icons.forEach(i => i.classList.remove('hovered'));
+            this.classList.add('hovered');
+        });
+        
+        icon.addEventListener('mouseleave', function() {
+            this.classList.remove('hovered');
+        });
+    });
+});
 // Cache selectors once
 const menuBtn = document.getElementById('menu-btn');
 const navMenu = document.getElementById('myNavmenu');
