@@ -95,7 +95,7 @@ setTheme(savedTheme);
 
 // Typed.js
 new Typed('.typedText', {
-    strings: ["Victor Macharia", "Fullstack Developer", "Cloud Nerd", "Freelancer"],
+    strings: ["Victor Macharia,", "ICT Support Specialist,","Fullstack Developer,","Freelancer."],
     typeSpeed: 70,
     backSpeed: 60,
     loop: true
