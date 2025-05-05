@@ -164,7 +164,7 @@
                                 <span class="title">React</span>
                                 <div class="skill-bar">
                                     <span class="skill-per react">
-                                        <span class="tooltip">60%</span>
+                                        <span class="tooltip">40%</span>
                                     </span>
                                 </div>
                             </div>
@@ -370,8 +370,8 @@
 
                                 </div>
                             </div>
-                            <a href="https://github.com/mashaamacharia/PagesDeploy"
-                                target="_blank" rel="noopener noreferrer">View Project</a>
+                            <a href="https://github.com/mashaamacharia/PagesDeploy" target="_blank"
+                                rel="noopener noreferrer">View Project</a>
                         </div>
                     </div>
                 </div>
@@ -482,7 +482,8 @@
                         </div>
                     </div>
                     <div class="portfolio-item stagger-item">
-                        <img src="images\kengenrecommendation.jpg" alt="KenGen Recommendation Letter" class="portfolio-img">
+                        <img src="images\kengenrecommendation.jpg" alt="KenGen Recommendation Letter"
+                            class="portfolio-img">
                         <div class="portfolio-overlay">
                             <h3>KenGen Recommendation</h3>
                             <p>Earned August , 2024 | KenGen ICT department</p>
@@ -560,26 +561,30 @@
                         </div>
                     </div>
                     <!-- Contact Form -->
-                    <form id="contact-form" action="send_message.php" method="POST">
-                        <div class="col">
-                            <div class="form-control">
-                                <div class="form-inputs">
-                                    <input type="text" name="name" class="input-field" placeholder="Your Name" required>
-                                    <input type="email" name="email" class="input-field" placeholder="Your Email"
-                                        required>
-                                </div>
-                                <div class="text-area">
-                                    <input type="text" name="subject" class="input-subject" placeholder="Subject"
-                                        required>
-                                    <textarea name="message" placeholder="Your Message..." required></textarea>
-                                </div>
-                                <div class="form-button">
-                                    <button type="submit" class="btn">Send Message <i
-                                            class="uil uil-message"></i></button>
+                    <div class="relative-container">
+                        <div id="toast" class="toast"></div>
+                        <form id="contact-form" action="https://formspree.io/f/mrbqqabk" method="POST">
+                            <div class="col">
+                                <div class="form-control">
+                                    <div class="form-inputs">
+                                        <input type="text" name="name" class="input-field" placeholder="Your Name"
+                                            required>
+                                        <input type="email" name="email" class="input-field" placeholder="Your Email"
+                                            required>
+                                    </div>
+                                    <div class="text-area">
+                                        <input type="text" name="subject" class="input-subject" placeholder="Subject"
+                                            required>
+                                        <textarea name="message" placeholder="Your Message..." required></textarea>
+                                    </div>
+                                    <div class="form-button">
+                                        <button type="submit" class="btn">Send Message <i
+                                                class="uil uil-message"></i></button>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </form>
+                        </form>
+                    </div>
 
                     <!-- Success or Error Message -->
                     <div id="message" class="alert alert-<?php echo $message_type; ?>">
@@ -643,6 +648,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="assets/script.js"></script>
+    <script src="assets/contact-form.js"></script>
 </body>
 
 </html>
