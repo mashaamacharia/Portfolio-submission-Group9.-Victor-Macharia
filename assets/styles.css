@@ -414,6 +414,9 @@ body.dark-mode #sun {
     background-color: var(--primary-color-dark);
     transform: scale(1.05);
 }
+.small{
+    color: var(--primary-color);
+}
 
 /* Skills */
 .skill {
